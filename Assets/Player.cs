@@ -23,25 +23,26 @@ public class Player : MonoBehaviour {
  				if(Vector3.Distance(this.transform.position, hit.transform.position) < clickDistance) {
  					absintheLevel += 1.0f;
  					// _particle.Play();
- 					Debug.Log("click");
+ 					
  				}
  			}
  		}
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
 		float v = Input.GetAxis("Vertical");
 		
 		if(v != 0.0f) {
-			transform.Translate(Vector3.forward * v * Time.deltaTime); 
+			transform.Translate(Vector3.forward * v * Time.deltaTime);
 		}
 		if(Input.GetButtonDown("Fire1")) {
-			Debug.Log("fire1");
+			
 			ShootRay();
 		}
 		if(Input.GetButtonDown("Fire2")) {
-			Debug.Log("fire2");	
+			
 			ShootRay();
 		}
 	}
